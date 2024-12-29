@@ -1,0 +1,8 @@
+[Desktop]
+Wallpaper=org.kde.image
+WallpaperPath=/usr/share/backgrounds/aurum/0001.jpeg
+
+
+[Widgets]
+# Ensure the default icon for the Start menu is set
+DefaultPanelWidget=org.kde.plasma.kicker
