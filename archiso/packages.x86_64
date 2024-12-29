@@ -82,6 +82,9 @@ okular
 gwenview
 sddm-kcm
 
+syslinux
+edk2-shell
+
 # Additional packages
 aurum-artwork
 aurum-backgrounds
