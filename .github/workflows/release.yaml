@@ -37,6 +37,7 @@ jobs:
         path: output/
     - uses: ncipollo/release-action@v1
       with:
+        token: ${{ secrets.GITHUB_TOKEN }}
         name: aurumOS ${{inputs.state}}
         tag: ${{inputs.codename}}
         artifacts: output/*.iso
