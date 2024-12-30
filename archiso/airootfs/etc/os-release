@@ -1,7 +1,7 @@
 NAME="aurumOS"
 # VERSION="20241105"
 ID="aurum"
-ID_LIKE="opensuse suse"
+ID_LIKE="arch"
 VERSION_ID="20241105"
 PRETTY_NAME="aurumOS"
 ANSI_COLOR="0;32"
