@@ -1,6 +1,9 @@
 name: Build and Upload Release
 
 on: 
+  push:
+    tags:
+      - '*'
   workflow_dispatch:
     inputs:
       state:
@@ -35,9 +38,13 @@ jobs:
       with:
         name: iso-artifact
         path: output/
-    - uses: ncipollo/release-action@v1
+    - name: release
+      uses: actions/create-release@v1
+      id: create_release
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        name: aurumOS ${{inputs.state}}
-        tag: ${{inputs.codename}}
-        artifacts: output/*.iso
+        draft: false
+        prerelease: false
+        release_name: aurumOS-${{ github.ref }}
+        tag_name: ${{ github.ref }}
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
