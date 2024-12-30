@@ -13,6 +13,7 @@ on:
           - 'alpha'
       codename:
         description: 'Codename of the release'
+        default: 'none'
         required: true
 
 jobs:
@@ -36,6 +37,6 @@ jobs:
         path: output/
     - uses: ncipollo/release-action@v1
       with:
-        name: aurumOS ${{inputs.codename}}-${{inputs.state}}
-        tag: ${{inputs.codename}}-${{inputs.state}}
+        name: aurumOS ${{inputs.state}}
+        tag: ${{inputs.codename}}
         artifacts: output/*.iso
